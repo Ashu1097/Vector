@@ -29,7 +29,7 @@ static inline void vector_init(Vector *vector, const size_t element_size) {
 static inline int push_back(Vector *vector, const void *data) {
     if (vector->size >= vector->capacity) {
         const size_t new_capacity = vector->capacity * 2;
-        int *new_data = realloc(vector->data, new_capacity * sizeof(int));
+        void *new_data = realloc(vector->data, new_capacity * sizeof(int));
         if (new_data == NULL) {
             perror("Failed to allocate memory");
             exit(EXIT_FAILURE);
