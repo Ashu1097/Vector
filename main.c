@@ -30,6 +30,8 @@ int main(void) {
     }
     printf("\n");
     printf("Element at index 2: %d\n", *(int *)at(&vector, 1));
+    printf("Size : %d\n", vector.size);
+    printf("Capacity : %zu\n", vector.capacity);
     clear(&vector);
 
     Vector chars;
