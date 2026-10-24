@@ -6,9 +6,11 @@ int main(void) {
     const int a = 10;
     const int b = 20;
     const int c = 30;
+    const int d = 40;
     push_back(&vector, &a);
     push_back(&vector, &b);
     push_back(&vector, &c);
+    push_back(&vector, &d);
     for (size_t i = 0; i < vector.size; i++) {
         const int *element = (int *)at(&vector, i);
         if (element != NULL) {
@@ -25,6 +27,7 @@ int main(void) {
     printf("\n");
     const int replacement = 99;
     replace(&vector, 1, &replacement);
+    replace(&vector, 2, &(int){1024});
     for (int i = 0; i < vector.size; i++) {
         printf("%d ", vector.data[i]);
     }

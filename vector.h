@@ -69,7 +69,7 @@ static inline int replace(const Vector *vector, const size_t index, const void* 
         exit(EXIT_FAILURE);
     }
     memcpy(
-        (unsigned char *)vector->data + vector->size * vector->element_size,
+        (unsigned char *)vector->data + index * vector->element_size,
         data,
         vector->element_size
         );
